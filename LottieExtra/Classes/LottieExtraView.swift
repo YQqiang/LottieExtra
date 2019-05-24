@@ -16,8 +16,6 @@ import Lottie
         return animationV
     }()
     
-    fileprivate lazy var kps: [FloatValueProvider] = []
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         createView()
@@ -89,7 +87,6 @@ extension LottieExtraView {
             let kp = AnimationKeypath(keypath: "\(keyPath).Transform.Opacity")
             let provider = FloatValueProvider(opacity)
             animationView.setValueProvider(provider, keypath: kp)
-            kps.append(provider)
         }
     }
 }
