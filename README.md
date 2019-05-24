@@ -22,7 +22,7 @@ pod 'LottieExtra'
 
 ## Author
 
-oxape, 1054572107@qq.com
+yuqiang, yuqiang.coder@gmail.com
 
 ## License
 

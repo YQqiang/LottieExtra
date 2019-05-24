@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17D0B8A9F62151B61BCD61A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		17D0B8A9F62151B61BCD61A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2A6FB6635834D14960D9545F /* Pods_LottieExtra_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieExtra_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CADC85984D556058EA05163 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2CADC85984D556058EA05163 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3C28312F31DEA730A7E06371 /* Pods-LottieExtra_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieExtra_Example.release.xcconfig"; path = "Target Support Files/Pods-LottieExtra_Example/Pods-LottieExtra_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* LottieExtra_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieExtra_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		607FACE51AFB9204008FA782 /* LottieExtra_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottieExtra_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		717798B57BB643B1FCC50B02 /* LottieExtra.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LottieExtra.podspec; path = ../LottieExtra.podspec; sourceTree = "<group>"; };
+		717798B57BB643B1FCC50B02 /* LottieExtra.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LottieExtra.podspec; path = ../LottieExtra.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		860C147BC34D585803896EAC /* Pods_LottieExtra_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieExtra_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86A5C1ABEC27B871B4E30B3 /* Pods-LottieExtra_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieExtra_Tests.release.xcconfig"; path = "Target Support Files/Pods-LottieExtra_Tests/Pods-LottieExtra_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AC9E185834938FF55F5D48EE /* Pods-LottieExtra_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieExtra_Example.debug.xcconfig"; path = "Target Support Files/Pods-LottieExtra_Example/Pods-LottieExtra_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 				EB76BA880755D9D85F63FCE6 /* Pods-LottieExtra_Tests.debug.xcconfig */,
 				A86A5C1ABEC27B871B4E30B3 /* Pods-LottieExtra_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

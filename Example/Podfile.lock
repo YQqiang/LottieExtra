@@ -1,0 +1,16 @@
+PODS:
+  - LottieExtra (0.0.1)
+
+DEPENDENCIES:
+  - LottieExtra (from `../`)
+
+EXTERNAL SOURCES:
+  LottieExtra:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LottieExtra: 157f9e9eba6558e5337b6482a4240cf9ad9458bc
+
+PODFILE CHECKSUM: 6b315aa970b73183cc3c8d7b2f258e3c82ae344c
+
+COCOAPODS: 1.7.0.beta.3
