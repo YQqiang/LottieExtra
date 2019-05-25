@@ -59,7 +59,7 @@ public struct LottieExtraAction {
         }
         actionStack.forEach { (lottieAction) in
             if lottieAction.rect.contains(convertPoint) {
-                (lottieAction.target as AnyObject).performSelector(onMainThread: lottieAction.action, with: nil, waitUntilDone: false)
+                (lottieAction.target as AnyObject).performSelector(onMainThread: lottieAction.action, with: self, waitUntilDone: false)
             }
         }
     }

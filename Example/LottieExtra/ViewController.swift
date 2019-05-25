@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         
         lottieView.addTarget(target: self, action: #selector(gridAction), keyPath: "按钮_电网")
         
-        lottieView.addTarget(target: self, action: #selector(invertAction), keyPath: "按钮_逆变器")
+        lottieView.addTarget(target: self, action: #selector(invertAction(_:)), keyPath: "按钮_逆变器")
         
         lottieView.removeTarget(action: #selector(gridAction), keyPath: "按钮_电网")
     }
@@ -58,7 +58,8 @@ class ViewController: UIViewController {
         print(#function)
     }
     
-    @objc private func invertAction() {
+    @objc private func invertAction(_ sender: LottieExtraView) {
+        print(sender)
         print(#function)
     }
 
