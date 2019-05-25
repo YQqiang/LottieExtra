@@ -40,49 +40,49 @@ import Lottie
     }
 }
 
-extension LottieExtraView {
-    @objc public func configAnimation(name: String, bundle: Bundle = Bundle.main) {
+public extension LottieExtraView {
+    @objc func configAnimation(name: String, bundle: Bundle = Bundle.main) {
         let animation = Animation.named(name, bundle: bundle, subdirectory: nil, animationCache: nil)
         animationView.animation = animation
     }
 }
 
 // MARK: - control
-extension LottieExtraView {
+public extension LottieExtraView {
     
-    @objc public func play() {
+    @objc func play() {
         animationView.play()
     }
     
-    @objc public func pause() {
+    @objc func pause() {
         animationView.pause()
     }
     
-    @objc public func stop() {
+    @objc func stop() {
         animationView.stop()
     }
 }
 
 // MARK: - KeyPath Transform Opacity
-extension LottieExtraView {
+public extension LottieExtraView {
     
-    @objc public func show(keyPath: String) {
+    @objc func show(keyPath: String) {
         show(keyPaths: [keyPath])
     }
     
-    @objc public func show(keyPaths: [String]) {
+    @objc func show(keyPaths: [String]) {
         configKeyPath(keyPaths, opacity: 100.0)
     }
     
-    @objc public func hidden(keyPath: String) {
+    @objc func hidden(keyPath: String) {
         hidden(keyPaths: [keyPath])
     }
     
-    @objc public func hidden(keyPaths: [String]) {
+    @objc func hidden(keyPaths: [String]) {
         configKeyPath(keyPaths, opacity: 0.0)
     }
     
-    @objc public func configKeyPath(_ keyPaths: [String], opacity: CGFloat) {
+    @objc func configKeyPath(_ keyPaths: [String], opacity: CGFloat) {
         keyPaths.forEach { (keyPath) in
             let kp = AnimationKeypath(keypath: "\(keyPath).Transform.Opacity")
             let provider = FloatValueProvider(opacity)
