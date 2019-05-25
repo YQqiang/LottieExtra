@@ -46,6 +46,20 @@ class ViewController: UIViewController {
         
 //        lottieView.hidden(keyPath: "能量_逆变器to电池")
 //        lottieView.show(keyPath: "*")
+        
+        lottieView.addTarget(target: self, action: #selector(gridAction), keyPath: "按钮_电网")
+        
+        lottieView.addTarget(target: self, action: #selector(invertAction), keyPath: "按钮_逆变器")
+        
+        lottieView.removeTarget(action: #selector(gridAction), keyPath: "按钮_电网")
+    }
+    
+    @objc private func gridAction() {
+        print(#function)
+    }
+    
+    @objc private func invertAction() {
+        print(#function)
     }
 
     override func didReceiveMemoryWarning() {

@@ -33,6 +33,17 @@ public extension AnimationView {
         return CGPoint(x: vector.sizeValue.width, y: vector.sizeValue.height)
     }
     
+    /// 获取指定keyPath的rect (锚点为中心点时可用)
+    ///
+    /// - Parameter keyPath: keyPath
+    /// - Returns: rect
+    @objc func rect(for keyPath: String) -> CGRect {
+        let anchor = anchorPoint(for: keyPath)
+        let posi = position(for: keyPath)
+        let rect = CGRect(x: posi.x - anchor.x, y: posi.y - anchor.y, width: anchor.x * 2, height: anchor.y * 2)
+        return rect
+    }
+    
     /// 获取指定keyPath的旋转角度
     ///
     /// - Parameter keyPath: keyPath
