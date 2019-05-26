@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-public struct LottieExtraAction {
+private struct LottieExtraAction {
     var keyPath: String
     var rect: CGRect
     var target: Any
@@ -102,6 +102,23 @@ public extension LottieExtraView {
         actionStack.removeAll { (lottieAction) -> Bool in
             return action == lottieAction.action && keyPath == lottieAction.keyPath
         }
+    }
+}
+
+// MARK: - add view
+public extension LottieExtraView {
+    
+    /// 在keyPath上添加视图
+    ///
+    /// - Parameters:
+    ///   - view: 视图
+    ///   - keyPath: keyPath
+    @objc func addView(view: UIView, keyPath: String) {
+        let subView = AnimationSubview()
+        subView.addSubview(view)
+        let kp = AnimationKeypath(keypath: keyPath)
+        view.center = animationView.convert(animationView.position(for: keyPath), toLayerAt: kp) ?? CGPoint.zero
+        animationView.addSubview(subView, forLayerAt: kp)
     }
 }
 

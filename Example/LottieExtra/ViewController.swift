@@ -52,6 +52,18 @@ class ViewController: UIViewController {
         lottieView.addTarget(target: self, action: #selector(invertAction(_:)), keyPath: "按钮_逆变器")
         
         lottieView.removeTarget(action: #selector(gridAction), keyPath: "按钮_电网")
+        
+        let lbl = UILabel()
+        lbl.textColor = UIColor.black
+        lbl.text = "测试文字,,, Test label"
+        lbl.backgroundColor = UIColor.red
+        lbl.font = UIFont.systemFont(ofSize: 18)
+        lbl.textAlignment = .center
+        lbl.frame = CGRect(x: 0, y: 0, width: 300, height: 44)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            lbl.text = "文本内容发生了改变,  Test label"
+        }
+        lottieView.addView(view: lbl, keyPath: "文本_逆变器")
     }
     
     @objc private func gridAction() {
