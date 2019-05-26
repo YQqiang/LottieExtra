@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         lottieView.configAnimation(name: "micro")
         lottieView.play()
         lottieView.animationView.loopMode = .loop
+        
+        /// Test show/hidden keyPath
         lottieView.hidden(keyPath: "能量_电池to用电")
         lottieView.hidden(keyPath: "能量_电池to电网")
         lottieView.hidden(keyPath: "能量_电网to电池")
@@ -36,23 +38,15 @@ class ViewController: UIViewController {
         lottieView.hidden(keyPath: "能量_逆变器to电池")
 
         lottieView.hidden(keyPath: "按钮_电网")
-        
         lottieView.show(keyPath: "**")
-        
-        lottieView.animationView.logHierarchyKeypaths()
-//
         lottieView.show(keyPath: "能量_逆变器to用电")
-//        lottieView.show(keyPath: "能量_逆变器to电网")
         
-//        lottieView.hidden(keyPath: "能量_逆变器to电池")
-//        lottieView.show(keyPath: "*")
-        
+        ///  Test action
         lottieView.addTarget(target: self, action: #selector(gridAction), keyPath: "按钮_电网")
-        
         lottieView.addTarget(target: self, action: #selector(invertAction(_:)), keyPath: "按钮_逆变器")
-        
         lottieView.removeTarget(action: #selector(gridAction), keyPath: "按钮_电网")
         
+        /// Test add View
         let lbl = UILabel()
         lbl.textColor = UIColor.black
         lbl.text = "测试文字,,, Test label"
@@ -64,6 +58,18 @@ class ViewController: UIViewController {
             lbl.text = "文本内容发生了改变,  Test label"
         }
         lottieView.addView(view: lbl, keyPath: "文本_逆变器")
+        
+        let lbl2 = UILabel()
+        lbl2.textColor = UIColor.orange
+        lbl2.text = "电网文本"
+        lbl2.backgroundColor = UIColor.blue
+        lbl2.font = UIFont.systemFont(ofSize: 18)
+        lbl2.textAlignment = .center
+        lbl2.frame = CGRect(x: 0, y: 0, width: 200, height: 44)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
+            lbl2.text = "电网 文本 发生了变化"
+        }
+        lottieView.addView(view: lbl2, keyPath: "文本_电网")
     }
     
     @objc private func gridAction() {
