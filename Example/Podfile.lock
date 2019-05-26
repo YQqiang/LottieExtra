@@ -2,8 +2,6 @@ PODS:
   - lottie-ios (3.0.0)
   - LottieExtra (0.0.1):
     - lottie-ios
-    - MJExtension
-  - MJExtension (3.0.15.1)
 
 DEPENDENCIES:
   - LottieExtra (from `../`)
@@ -11,7 +9,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - lottie-ios
-    - MJExtension
 
 EXTERNAL SOURCES:
   LottieExtra:
@@ -19,8 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   lottie-ios: e412502a03b3dfdaa3e18284194022065d82c820
-  LottieExtra: e7adcef94a88359cf3939ffa1a4b2d71ef736fcc
-  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  LottieExtra: 91c4e053cf20a03e8a9568baea04a07dc5917c6b
 
 PODFILE CHECKSUM: 6b315aa970b73183cc3c8d7b2f258e3c82ae344c
 
