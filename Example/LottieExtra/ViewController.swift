@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         lottieView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         lottieView.configAnimation(name: "micro")
         lottieView.play()
-        lottieView.animationView.loopMode = .loop
+        lottieView.loopMode = .loop
         
         /// Test show/hidden keyPath
         lottieView.hidden(keyPath: "能量_电池to用电")

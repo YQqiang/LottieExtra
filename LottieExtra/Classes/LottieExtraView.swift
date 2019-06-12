@@ -15,13 +15,33 @@ private struct LottieExtraAction {
     var action: Selector
 }
 
+@objc public enum LottieExtraLoopMode: Int {
+    case playOnce = 0
+    case loop = 1
+    case autoReverse = 2
+}
+
 @objcMembers open class LottieExtraView: UIView {
 
     public private(set) var animationView: AnimationView = {
         let animationV = AnimationView()
+        animationV.loopMode = .loop
         animationV.contentMode = .scaleAspectFit
         return animationV
     }()
+    
+    public var loopMode: LottieExtraLoopMode = .loop {
+        didSet {
+            switch loopMode {
+            case .playOnce:
+                animationView.loopMode = .playOnce
+            case .loop:
+                animationView.loopMode = .loop
+            case .autoReverse:
+                animationView.loopMode = .autoReverse
+            }
+        }
+    }
     
     fileprivate lazy var actionStack: [LottieExtraAction] = []
     

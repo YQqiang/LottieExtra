@@ -36,7 +36,7 @@
     
     [self.lottieView configAnimationWithName:@"micro" bundle:[NSBundle mainBundle]];
     [self.lottieView play];
-//    lottieView.animationView.loopMode = .loop
+    self.lottieView.loopMode = LottieExtraLoopModeAutoReverse;
     
     /// Test show/hidden keyPath
     [self.lottieView hiddenWithKeyPath:@""];
