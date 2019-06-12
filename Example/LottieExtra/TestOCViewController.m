@@ -8,6 +8,7 @@
 
 #import "TestOCViewController.h"
 #import <LottieExtra/LottieExtra-Swift.h>
+#import <Lottie/Lottie-Swift.h>
 
 @interface TestOCViewController ()
 
@@ -56,6 +57,38 @@
     [self.lottieView addTargetWithTarget:self action:@selector(gridAction) keyPath:@"按钮_电网"];
     [self.lottieView addTargetWithTarget:self action:@selector(invertAction:) keyPath:@"按钮_逆变器"];
     [self.lottieView removeTargetWithAction:@selector(gridAction) keyPath:@"按钮_电网"];
+    
+    /// Test add View
+    UILabel *lbl = [[UILabel alloc] init];
+    lbl.textColor = UIColor.blackColor;
+    lbl.text = @"测试文字,,, Test label";
+    lbl.backgroundColor = UIColor.redColor;
+    lbl.font = [UIFont systemFontOfSize:18];
+    lbl.textAlignment = NSTextAlignmentCenter;
+    lbl.frame = CGRectMake(0, 0, 300, 44);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        lbl.text = @"文本内容发生了改变,  Test label";
+    });
+    [self.lottieView addViewWithView:lbl keyPath:@"文本_逆变器"];
+    
+    UILabel *lbl2 = [[UILabel alloc] init];
+    lbl2.textColor = UIColor.orangeColor;
+    lbl2.text = @"电网文本";
+    lbl2.backgroundColor = UIColor.blueColor;
+    lbl2.font = [UIFont systemFontOfSize:18];
+    lbl2.textAlignment = NSTextAlignmentCenter;
+    lbl2.frame = CGRectMake(0, 0, 200, 44);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        lbl2.text = @"电网 文本 发生了变化";
+    });
+    [self.lottieView addViewWithView:lbl2 keyPath:@"文本_电网"];
+    
+    /// Test view center
+    CGPoint position = [self.lottieView.animationView viewCenterFor:@"文本_PCS"];
+    UIView *viewP = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
+    viewP.backgroundColor = UIColor.orangeColor;
+    viewP.center = position;
+    [self.lottieView addSubview:viewP];
 }
 
 - (void)gridAction {
