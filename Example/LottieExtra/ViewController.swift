@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             lbl.text = "文本内容发生了改变,  Test label"
         }
-        lottieView.addView(view: lbl, keyPath: "文本_逆变器")
+        lottieView.addView(lbl, keyPath: "文本_逆变器")
         
         let lbl2 = UILabel()
         lbl2.textColor = UIColor.orange
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
             lbl2.text = "电网 文本 发生了变化"
         }
-        lottieView.addView(view: lbl2, keyPath: "文本_电网")
+        lottieView.addView(lbl2, keyPath: "文本_电网")
         
         /// Test view center
         let position = lottieView.animationView.viewCenter(for: "文本_PCS")

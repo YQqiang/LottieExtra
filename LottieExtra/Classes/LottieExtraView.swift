@@ -133,7 +133,7 @@ public extension LottieExtraView {
     /// - Parameters:
     ///   - view: 视图
     ///   - keyPath: keyPath
-    @objc func addView(view: UIView, keyPath: String) {
+    @objc func addView(_ view: UIView, keyPath: String) {
         let subView = AnimationSubview()
         subView.addSubview(view)
         let kp = AnimationKeypath(keypath: keyPath)

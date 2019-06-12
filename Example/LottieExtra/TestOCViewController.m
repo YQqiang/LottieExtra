@@ -69,7 +69,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         lbl.text = @"文本内容发生了改变,  Test label";
     });
-    [self.lottieView addViewWithView:lbl keyPath:@"文本_逆变器"];
+    [self.lottieView addView:lbl keyPath:@"文本_逆变器"];
     
     UILabel *lbl2 = [[UILabel alloc] init];
     lbl2.textColor = UIColor.orangeColor;
@@ -81,7 +81,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         lbl2.text = @"电网 文本 发生了变化";
     });
-    [self.lottieView addViewWithView:lbl2 keyPath:@"文本_电网"];
+    [self.lottieView addView:lbl2 keyPath:@"文本_电网"];
     
     /// Test view center
     CGPoint position = [self.lottieView.animationView viewCenterFor:@"文本_PCS"];
