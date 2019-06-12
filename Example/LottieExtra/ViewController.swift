@@ -70,6 +70,13 @@ class ViewController: UIViewController {
             lbl2.text = "电网 文本 发生了变化"
         }
         lottieView.addView(view: lbl2, keyPath: "文本_电网")
+        
+        /// Test view center
+        let position = lottieView.animationView.viewCenter(for: "文本_PCS")
+        let viewP = UIView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+        viewP.backgroundColor = UIColor.orange
+        viewP.center = position
+        lottieView.addSubview(viewP)
     }
     
     @objc private func gridAction() {
