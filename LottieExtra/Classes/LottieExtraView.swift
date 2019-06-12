@@ -8,11 +8,19 @@
 import UIKit
 import Lottie
 
-private struct LottieExtraAction {
-    var keyPath: String
-    var rect: CGRect
-    var target: Any
-    var action: Selector
+@objcMembers final public class LottieExtraAction: NSObject {
+    public var keyPath: String = ""
+    public var rect: CGRect = CGRect.zero
+    public var target: Any?
+    public var action: Selector?
+    
+    convenience init(keyPath: String, rect: CGRect, target: Any, action: Selector) {
+        self.init()
+        self.keyPath = keyPath
+        self.rect = rect
+        self.target = target
+        self.action = action
+    }
 }
 
 @objc public enum LottieExtraLoopMode: Int {
@@ -79,7 +87,13 @@ private struct LottieExtraAction {
         }
         actionStack.forEach { (lottieAction) in
             if lottieAction.rect.contains(convertPoint) {
-                (lottieAction.target as AnyObject).performSelector(onMainThread: lottieAction.action, with: self, waitUntilDone: false)
+                guard let action = lottieAction.action else {
+                    return;
+                }
+                guard let target = lottieAction.target else {
+                    return;
+                }
+                (target as AnyObject).performSelector(onMainThread: action, with: lottieAction, waitUntilDone: false)
             }
         }
     }

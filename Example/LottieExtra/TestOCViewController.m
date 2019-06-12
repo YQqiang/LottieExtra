@@ -95,9 +95,9 @@
     NSLog(@"%s", __func__);
 }
 
-- (void)invertAction:(LottieExtraView *)sender {
+- (void)invertAction:(LottieExtraAction *)sender {
     NSLog(@"%s", __func__);
-    NSLog(@"%@", sender);
+    NSLog(@"%@", sender.keyPath);
 }
 
 
