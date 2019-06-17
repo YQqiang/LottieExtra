@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'LottieExtra_Example' do
-  pod 'LottieExtra', :path => '../'
+  pod 'SGLottieExtra', :path => '../'
 
   target 'LottieExtra_Tests' do
     inherit! :search_paths

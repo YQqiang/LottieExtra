@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'LottieExtra'
+  s.name             = 'SGLottieExtra'
   s.version          = '0.0.2'
   s.summary          = 'lottie 的扩展'
 
