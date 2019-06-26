@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LottieExtra
+import SGLottieExtra
 
 class ViewController: UIViewController {
     

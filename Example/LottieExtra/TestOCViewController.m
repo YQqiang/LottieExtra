@@ -7,7 +7,7 @@
 //
 
 #import "TestOCViewController.h"
-#import <LottieExtra/LottieExtra-Swift.h>
+#import <SGLottieExtra/SGLottieExtra-Swift.h>
 #import <Lottie/Lottie-Swift.h>
 
 @interface TestOCViewController ()

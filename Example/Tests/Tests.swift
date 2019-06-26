@@ -1,5 +1,5 @@
 import XCTest
-import LottieExtra
+import SGLottieExtra
 
 class Tests: XCTestCase {
     
