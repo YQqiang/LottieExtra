@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
         view.addSubview(lottieView)
         lottieView.translatesAutoresizingMaskIntoConstraints = false
         lottieView.topAnchor.constraint(equalTo: view.topAnchor, constant: 32).isActive = true
@@ -92,6 +93,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let _ = presentingViewController {
+            dismiss(animated: true, completion: nil)
+        } else {
+            let vc = ViewController()
+            self .present(vc, animated: true, completion: nil)
+        }
+    }
 }
 

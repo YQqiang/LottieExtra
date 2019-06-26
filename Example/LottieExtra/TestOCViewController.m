@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.lottieView];
     self.lottieView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.lottieView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:32].active = YES;
@@ -100,5 +101,13 @@
     NSLog(@"%@", sender.keyPath);
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        TestOCViewController *testVC = [[TestOCViewController alloc] init];
+        [self presentViewController:testVC animated:YES completion:nil];
+    }
+}
 
 @end
