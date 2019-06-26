@@ -34,6 +34,7 @@ import Lottie
     public private(set) var animationView: AnimationView = {
         let animationV = AnimationView()
         animationV.loopMode = .loop
+        animationV.backgroundBehavior = .pauseAndRestore
         animationV.contentMode = .scaleAspectFit
         return animationV
     }()
