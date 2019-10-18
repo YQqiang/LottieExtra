@@ -104,6 +104,7 @@ public extension LottieExtraView {
     @objc func configAnimation(name: String, bundle: Bundle = Bundle.main) {
         let animation = Animation.named(name, bundle: bundle, subdirectory: nil, animationCache: nil)
         animationView.animation = animation
+        animationView.logHierarchyKeypaths()
     }
 }
 
@@ -151,7 +152,7 @@ public extension LottieExtraView {
     @objc func addView(_ view: UIView, keyPath: String) {
         let subView = AnimationSubview()
         subView.addSubview(view)
-        let kp = AnimationKeypath(keypath: keyPath)
+        let kp = AnimationKeypath(sgKeypath: keyPath)
         view.center = animationView.convert(animationView.position(for: keyPath), toLayerAt: kp) ?? CGPoint.zero
         animationView.addSubview(subView, forLayerAt: kp)
     }
@@ -194,7 +195,7 @@ public extension LottieExtraView {
     
     @objc func configKeyPath(_ keyPaths: [String], opacity: CGFloat) {
         keyPaths.forEach { (keyPath) in
-            let kp = AnimationKeypath(keypath: "\(keyPath).Transform.Opacity")
+            let kp = AnimationKeypath(sgKeypath: "\(keyPath).Transform.Opacity")
             let provider = FloatValueProvider(opacity)
             animationView.setValueProvider(provider, keypath: kp)
         }

@@ -14,7 +14,7 @@ public extension AnimationView {
     /// - Parameter keyPath: keyPath
     /// - Returns: 位置
     @objc func position(for keyPath: String) -> CGPoint {
-        let kp = AnimationKeypath(keypath: "\(keyPath).Transform.Position")
+        let kp = AnimationKeypath(sgKeypath: "\(keyPath).Transform.Position")
         guard let vector = getValue(for: kp, atFrame: nil) as? Vector3D  else {
             return CGPoint.zero
         }
@@ -26,7 +26,7 @@ public extension AnimationView {
     /// - Parameter keyPath: keyPath
     /// - Returns: 锚点
     @objc func anchorPoint(for keyPath: String) -> CGPoint {
-        let kp = AnimationKeypath(keypath: "\(keyPath).Transform.Anchor Point")
+        let kp = AnimationKeypath(sgKeypath: "\(keyPath).Transform.Anchor Point")
         guard let vector = getValue(for: kp, atFrame: nil) as? Vector3D  else {
             return CGPoint.zero
         }
@@ -49,7 +49,7 @@ public extension AnimationView {
     /// - Parameter keyPath: keyPath
     /// - Returns: 旋转角度
     @objc func rotation(for keyPath: String) -> Double {
-        let kp = AnimationKeypath(keypath: "\(keyPath).Transform.Rotation")
+        let kp = AnimationKeypath(sgKeypath: "\(keyPath).Transform.Rotation")
         guard let vector = getValue(for: kp, atFrame: nil) as? Vector1D  else {
             return Double.zero
         }
@@ -61,7 +61,7 @@ public extension AnimationView {
     /// - Parameter keyPath: keyPath
     /// - Returns: 不透明度
     @objc func opacity(for keyPath: String) -> Double {
-        let kp = AnimationKeypath(keypath: "\(keyPath).Transform.Opacity")
+        let kp = AnimationKeypath(sgKeypath: "\(keyPath).Transform.Opacity")
         guard let vector = getValue(for: kp, atFrame: nil) as? Vector1D  else {
             return Double.zero
         }
@@ -93,6 +93,9 @@ public extension AnimationView {
         let canvasW = animation.bounds.width
         let canvasH = animation.bounds.height
         
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+        
         let viewW = bounds.size.width
         let viewH = bounds.size.height
         
@@ -104,5 +107,18 @@ public extension AnimationView {
             offset = CGPoint(x: (viewH / scale - canvasH) / 2, y: 0)
         }
         return (scale, offset)
+    }
+}
+
+public extension AnimationKeypath {
+    init(sgKeypath: String) {
+        let firstDot = "."
+        if sgKeypath.hasPrefix(firstDot) {
+            var keys = sgKeypath.dropFirst().components(separatedBy: ".")
+            keys[0] = "\(firstDot)\(keys[0])"
+            self.init(keys: keys)
+        } else {
+            self.init(keypath: sgKeypath)
+        }
     }
 }
