@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F0B944722B0B0C8007BCFAA /* TestOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B944622B0B0C8007BCFAA /* TestOCViewController.m */; };
 		2F1AC3162297D78800F85EEB /* micro.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F1AC3152297D78800F85EEB /* micro.json */; };
+		2F7C0F2E2359987B009DA0B9 /* micro_dot.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C0F2D2359987B009DA0B9 /* micro_dot.json */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		2F0B944522B0B0C8007BCFAA /* TestOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOCViewController.h; sourceTree = "<group>"; };
 		2F0B944622B0B0C8007BCFAA /* TestOCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOCViewController.m; sourceTree = "<group>"; };
 		2F1AC3152297D78800F85EEB /* micro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = micro.json; sourceTree = "<group>"; };
+		2F7C0F2D2359987B009DA0B9 /* micro_dot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = micro_dot.json; sourceTree = "<group>"; };
 		3C28312F31DEA730A7E06371 /* Pods-LottieExtra_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieExtra_Example.release.xcconfig"; path = "Target Support Files/Pods-LottieExtra_Example/Pods-LottieExtra_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* LottieExtra_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieExtra_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		607FACD21AFB9204008FA782 /* Example for LottieExtra */ = {
 			isa = PBXGroup;
 			children = (
+				2F7C0F2D2359987B009DA0B9 /* micro_dot.json */,
 				2F1AC3152297D78800F85EEB /* micro.json */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7C0F2E2359987B009DA0B9 /* micro_dot.json in Resources */,
 				2F1AC3162297D78800F85EEB /* micro.json in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
