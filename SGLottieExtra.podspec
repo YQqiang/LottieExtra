@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SGLottieExtra'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'lottie 的扩展'
 
 # This description is used to generate tags and improve search results.
