@@ -21,17 +21,17 @@ Pod::Spec.new do |s|
 基于lottie, 扩展图层的点击事件和添加控件至图层
                        DESC
 
-  s.homepage         = 'http://app.sungrow.cn:3000/iOS/LottieExtra'
+  s.homepage         = 'http://app.sungrow.cn:3000/iOS/SGLottieExtra'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sungrow' => 'sungrow@sungrow.com' }
-  s.source           = { :git => 'http://app.sungrow.cn:3000/iOS/LottieExtra.git', :tag => s.version.to_s }
+  s.source           = { :git => 'http://app.sungrow.cn:3000/iOS/SGLottieExtra.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'LottieExtra/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'LottieExtra' => ['LottieExtra/Assets/*.png']
   # }
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  
+
   s.dependency 'lottie-ios'
-  
+
 end
