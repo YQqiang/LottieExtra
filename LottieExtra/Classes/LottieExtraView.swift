@@ -104,7 +104,6 @@ public extension LottieExtraView {
     @objc func configAnimation(name: String, bundle: Bundle = Bundle.main) {
         let animation = Animation.named(name, bundle: bundle, subdirectory: nil, animationCache: nil)
         animationView.animation = animation
-        animationView.logHierarchyKeypaths()
     }
 }
 
